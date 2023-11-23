@@ -1,10 +1,13 @@
 import React from 'react';
+import MainWrapper from "./UI/Main/MainWrapper";
+import MainBG from "./UI/Main/MainBG";
 
 const Main: React.FC = () => {
     return (
-        <div>
 
-        </div>
+        <MainWrapper>
+            <MainBG/>
+        </MainWrapper>
     );
 };
 
