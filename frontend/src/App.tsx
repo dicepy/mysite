@@ -1,20 +1,17 @@
 import React from 'react';
-import Header from "./components/header/Header";
-import {createGlobalStyle} from "styled-components";
+import Header from "./components/Header";
+import GlobalStyles from "./components/UI/GlobalStyles";
+import Main from "./components/Main";
 
-const GlobalStyles = createGlobalStyle`
-  *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-`
+
+
 
 const App : React.FC = () =>{
     return (
         <div>
             <GlobalStyles/>
             <Header/>
+            <Main/>
         </div>
     )
 }
