@@ -6,7 +6,7 @@ const HeaderElement = styled.div`
     padding: 10px;
     font-weight: 500;
     transition: opacity 0.3s ease;
-  cursor: pointer;
+    cursor: pointer;
     &:hover{
       opacity: 0.75;
     }

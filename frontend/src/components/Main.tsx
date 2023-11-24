@@ -4,9 +4,8 @@ import MainBG from "./UI/Main/MainBG";
 
 const Main: React.FC = () => {
     return (
-
         <MainWrapper>
-            <MainBG/>
+            <MainBG />
         </MainWrapper>
     );
 };

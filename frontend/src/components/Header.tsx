@@ -5,11 +5,10 @@ import HeaderElement from "./UI/Header/HeaderElement";
 const menuElements = ["Главная", "Проекты", "Контакты"]
 
 const Header:React.FC = () => {
-    let i = 0;
     return (
         <HeaderContainer>
-            {menuElements.map(el=> (
-                <HeaderElement key={i++}>
+            {menuElements.map((el, index) => (
+                <HeaderElement key={index}>
                     {el}
                 </HeaderElement>
             ))}

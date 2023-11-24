@@ -4,9 +4,11 @@ import GlobalStyles from "./components/UI/GlobalStyles";
 import Main from "./components/Main";
 
 
+interface AppProps {
+    // для пропсов если есть
+}
 
-
-const App : React.FC = () =>{
+const App : React.FC<AppProps> = () =>{
     return (
         <div>
             <GlobalStyles/>
