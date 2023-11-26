@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../colors";
+import colors from "../Global/colors";
 
 const HeaderElement = styled.div`
     color: ${colors.back};

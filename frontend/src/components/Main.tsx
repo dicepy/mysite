@@ -1,11 +1,16 @@
 import React from 'react';
-import MainWrapper from "./UI/Main/MainWrapper";
-import MainBG from "./UI/Main/MainBG";
+import MainWrapper from "./Main/MainWrapper";
+import MainInfo from "./Main-info";
+import SubTitle from "./Main/SubTitle";
+import Techs from "./Techs";
 
 const Main: React.FC = () => {
     return (
         <MainWrapper>
-            <MainBG />
+            <MainInfo />
+            <SubTitle>Разработка ПО любой сложности</SubTitle>
+            <Techs/>
+
         </MainWrapper>
     );
 };

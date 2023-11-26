@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from "./components/Header";
-import GlobalStyles from "./components/UI/GlobalStyles";
+import GlobalStyles from "./components/Global/GlobalStyles";
 import Main from "./components/Main";
+import MainBG from "./components/Main/MainBG";
 
 
 interface AppProps {
@@ -11,7 +12,9 @@ interface AppProps {
 const App : React.FC<AppProps> = () =>{
     return (
         <div>
+
             <GlobalStyles/>
+            <MainBG/>
             <Header/>
             <Main/>
         </div>

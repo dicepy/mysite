@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from "../colors";
+import colors from "../Global/colors";
 
 const HeaderContainer = styled.div`
   background: linear-gradient(to right, ${colors.main}, ${colors.accent});

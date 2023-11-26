@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderContainer from "./UI/Header/HeaderContainer";
-import HeaderElement from "./UI/Header/HeaderElement";
+import HeaderContainer from "./Header/HeaderContainer";
+import HeaderElement from "./Header/HeaderElement";
 
 const menuElements = ["Главная", "Проекты", "Контакты"]
 

@@ -1,5 +1,5 @@
 import styled, {keyframes} from 'styled-components';
-import clouds from './../../../images/clouds.png'
+import clouds from '../../images/clouds.png'
 
 const Animation = keyframes`
   0%{
