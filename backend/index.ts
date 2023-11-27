@@ -4,7 +4,7 @@ import axios, { AxiosResponse } from 'axios';
 import bodyParser from 'body-parser';
 import moment from 'moment';
 import key from './src/secret';
-
+const cors = require('cors');
 interface GitHubUser {
     login: string;
     public_repos: number;
@@ -17,6 +17,7 @@ interface TelegramRequest {
 }
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 4444;
 
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -8,6 +8,9 @@ const MainWrapper = styled.main`
    max-width: 1280px;
    margin: 20px auto;
    align-items: center;
+   @media(max-width: 1280px){
+      margin: 20px;
+   }
    `
 
 export default MainWrapper
