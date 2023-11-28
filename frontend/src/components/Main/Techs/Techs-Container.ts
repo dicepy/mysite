@@ -5,6 +5,7 @@ const TechsContainer = styled.div`
   width: 100%;
   background: linear-gradient(to left, ${colors.main}, ${colors.accent});
   padding: 20px;
+  margin: 20px;
   border-radius: 20px;
   display: flex;
   justify-content: space-evenly;

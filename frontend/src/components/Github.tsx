@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import GitContainer from "./Main/Github/Git-container";
+import git from '../images/git.png';
 
 interface GitHubInfo {
     username: string;
@@ -26,17 +28,21 @@ const Github: React.FC = () => {
     }, []); // Пустой массив зависимостей для выполнения эффекта только при монтировании компонента
 
     return (
-        <div>
+        <GitContainer>
+            <a href="https://github.com/dicepy"><img src={git}/></a>
+            <div>
+                <p>Имя: {githubInfo?githubInfo.username:"Loading username"}</p>
+                <p>Репозиториев: {githubInfo?githubInfo.repositories:"Loading repos"}</p>
+                <p>Аккаунт создан: {githubInfo?githubInfo.accountCreatedAt:"Loading date"}</p>
+            </div>
             {githubInfo ? (
                 <>
-                    <p>Username: {githubInfo.username}</p>
-                    <p>Repositories: {githubInfo.repositories}</p>
-                    <p>Account Created At: {githubInfo.accountCreatedAt}</p>
+
                 </>
             ) : (
                 <p>Loading...</p>
             )}
-        </div>
+        </GitContainer>
     );
 };
 
