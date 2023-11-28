@@ -10,6 +10,10 @@ const HeaderContainer = styled.div`
   justify-content: end;
   padding-right: 20px;
   box-shadow: 0 0 10px ${colors.main};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 `
 
 export default HeaderContainer

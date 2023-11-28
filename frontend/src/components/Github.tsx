@@ -17,7 +17,6 @@ const Github: React.FC = () => {
             try {
                 const response = await axios.get('http://localhost:4444/github-info'); // Адрес вашего бекенда
                 const data: GitHubInfo = response.data;
-                console.log(data)
                 setGithubInfo(data);
             } catch (error) {
                 console.error('Error fetching GitHub data:', error);
@@ -28,8 +27,8 @@ const Github: React.FC = () => {
     }, []); // Пустой массив зависимостей для выполнения эффекта только при монтировании компонента
 
     return (
-        <GitContainer>
-            <a href="https://github.com/dicepy"><img src={git}/></a>
+        <GitContainer id="projects">
+            <a href="https://github.com/dicepy"><img src={git} alt="git"/></a>
             <div>
                 <p>Имя: {githubInfo?githubInfo.username:"Loading username"}</p>
                 <p>Репозиториев: {githubInfo?githubInfo.repositories:"Loading repos"}</p>

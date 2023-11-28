@@ -6,7 +6,7 @@ import List from "./Main/Main-info/List";
 
 const MainInfo:React.FC = () => {
     return (
-        <InfoContainer>
+        <InfoContainer id="main">
             <Title size="10rem">
                 Dice <br/>Dev
             </Title>

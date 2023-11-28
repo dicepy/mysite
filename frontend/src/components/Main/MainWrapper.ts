@@ -7,6 +7,7 @@ const MainWrapper = styled.main`
    justify-content: center;
    max-width: 1280px;
    margin: 20px auto;
+   margin-top: 60px;
    align-items: center;
    @media(max-width: 1280px){
       margin: 20px;
