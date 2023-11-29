@@ -1,24 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import HeaderContainer from "./Header/HeaderContainer";
 import HeaderElement from "./Header/HeaderElement";
-
-interface Menu {
-    [key: string]: string;
-}
-
-const menuElements: Menu = {
-    "Главная": "main",
-    "Проекты": "projects",
-    "Контакты": "contacts"
-};
+import { useStore } from "../Store";
 
 const Header: React.FC = () => {
-    const [activeElement, setActiveElement] = useState<string | null>(null);
+    const { menuElements, activeElement, setActiveElement } = useStore();
 
     const scrollToElement = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+            element.scrollIntoView({ behavior: "smooth", block: "center" });
             setActiveElement(id);
         }
     };
@@ -29,7 +20,7 @@ const Header: React.FC = () => {
                 <HeaderElement
                     key={index}
                     onClick={() => scrollToElement(menuElements[el])}
-                    active={menuElements[el] === activeElement}
+                    active={menuElements[el] === activeElement ? 'true' : 'false'}
                 >
                     {el}
                 </HeaderElement>

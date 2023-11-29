@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import GitContainer from "./Main/Github/Git-container";
 import git from '../images/git.png';
+import {useInView} from "react-intersection-observer";
+import {useStore} from "../Store";
 
 interface GitHubInfo {
     username: string;
@@ -10,6 +12,19 @@ interface GitHubInfo {
 }
 
 const Github: React.FC = () => {
+    const { setActiveElement } = useStore();
+    const { ref, inView, entry} = useInView({
+        /* Optional options */
+        threshold: 1,
+    });
+
+    useEffect(() => {
+        if (entry) {
+            if (entry.isIntersecting) {
+                setActiveElement("projects");
+            }
+        }
+    }, [inView]);
     const [githubInfo, setGithubInfo] = useState<GitHubInfo | null>(null);
 
     useEffect(() => {
@@ -27,7 +42,7 @@ const Github: React.FC = () => {
     }, []); // Пустой массив зависимостей для выполнения эффекта только при монтировании компонента
 
     return (
-        <GitContainer id="projects">
+        <GitContainer id="projects" ref={ref}>
             <a href="https://github.com/dicepy"><img src={git} alt="git"/></a>
             <div>
                 <p>Имя: {githubInfo?githubInfo.username:"Loading username"}</p>

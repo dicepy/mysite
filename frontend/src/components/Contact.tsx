@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import ContactWrapper from "./Main/Contact/Contact-wrapper";
 import ContactForm from "./Main/Contact/Contact-form";
 import colors from "./Global/colors";
+import {useStore} from "../Store";
+import {useInView} from "react-intersection-observer";
 
 const ContactDetails = styled.div`
   display: flex;
@@ -19,8 +21,21 @@ const ContactHeader = styled.h2`
 
 
 const Contact: React.FC = () => {
+    const { setActiveElement } = useStore();
+    const { ref, inView, entry} = useInView({
+        /* Optional options */
+        threshold: 1,
+    });
+
+    useEffect(() => {
+        if (entry) {
+            if (entry.isIntersecting) {
+                setActiveElement("contacts");
+            }
+        }
+    }, [inView]);
     return (
-        <ContactWrapper id="contacts">
+        <ContactWrapper id="contacts" ref={ref}>
             <ContactDetails>
                 <ContactHeader>Связаться со мной</ContactHeader>
                 <p>Telegram: @Deniisus</p>
