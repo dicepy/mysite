@@ -12,10 +12,19 @@ const ContactDetails = styled.div`
   justify-content: space-around;
   font-size: 1.5rem;
   color: ${colors.main};
+  @media(max-width: 768px){
+    width: 100%;
+  }
   
 `;
 const ContactHeader = styled.h2`
   font-size: 3rem;
+  @media(max-width: 768px){
+    margin-bottom: 20px;
+  }
+  @media(max-width: 1280px){
+    font-size: 1.5rem;
+  }
 `;
 
 

@@ -4,6 +4,7 @@ import GlobalStyles from "./components/Global/GlobalStyles";
 import Main from "./components/Main";
 import MainBG from "./components/Main/MainBG";
 import {StoreProvider} from "./Store";
+import Footer from "./components/Footer";
 
 
 interface AppProps {
@@ -18,6 +19,7 @@ const App : React.FC<AppProps> = () =>{
             <MainBG/>
             <Header/>
             <Main/>
+            <Footer/>
         </StoreProvider>
     )
 }

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect} from 'react';
 import InfoContainer from "./Main/Main-info/Info-Container";
 import Title from "./Main/Main-info/Title";
 import ListItem from "./Main/Main-info/ListItem";
@@ -11,7 +11,7 @@ const MainInfo:React.FC = (props) => {
     const { setActiveElement } = useStore();
     const { ref, inView, entry} = useInView({
         /* Optional options */
-        threshold: 1,
+        threshold: 1
     });
 
     useEffect(() => {

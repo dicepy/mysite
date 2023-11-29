@@ -10,7 +10,10 @@ const Header: React.FC = () => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: "smooth", block: "center" });
-            setActiveElement(id);
+            setTimeout(() => {
+                setActiveElement(id);
+            }, 400)
+
         }
     };
 

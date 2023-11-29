@@ -1,20 +1,20 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import colors from "../Global/colors";
 
-const HeaderContainer = styled.div`
+const FooterWrapper = styled.div`
   background: linear-gradient(to right, ${colors.main}, ${colors.accent});
   height: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   padding-right: 20px;
   box-shadow: 0 0 10px ${colors.main};
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  z-index: 1000;
-`
+  color: ${colors.back};
+  font-size: 1rem;
+  text-align: center;
+    `;
 
-export default HeaderContainer
+export default FooterWrapper;

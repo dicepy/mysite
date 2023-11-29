@@ -14,16 +14,16 @@ const Techs:React.FC = () => {
                 Используемый стек
             </SubTitle>
             <TechsItem>Python
-                <img src={py}/>
+                <img src={py} alt="Python"/>
             </TechsItem>
             <TechsItem>TypeScript
-                <img src={ts}/>
+                <img src={ts} alt="TypeScript"/>
             </TechsItem>
             <TechsItem>Node.js
-                <img src={node}/>
+                <img src={node} alt="Node.js"/>
             </TechsItem>
             <TechsItem>React
-                <img src={react}/>
+                <img src={react} alt="React"/>
             </TechsItem>
         </TechsContainer>
     );

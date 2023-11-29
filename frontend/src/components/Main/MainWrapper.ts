@@ -6,11 +6,12 @@ const MainWrapper = styled.main`
    flex-direction: column;
    justify-content: center;
    max-width: 1280px;
-   margin: 20px auto;
-   margin-top: 60px;
+   margin: 60px auto;
+   margin-bottom: 20px;
    align-items: center;
    @media(max-width: 1280px){
-      margin: 20px;
+      padding: 20px;
+      margin-bottom: 0;
    }
    `
 

@@ -12,6 +12,10 @@ const ContactFormWrapper = styled.div`
   color: ${colors.back};
   border-radius: 20px;
   box-shadow: 0 0 10px ${colors.main};
+  @media(max-width: 768px){
+    width: 100%;
+    margin: 20px 0;
+  }
 `;
 
 
@@ -60,6 +64,9 @@ const FormButton = styled.button`
 const ContactHeader = styled.h2`
     margin-bottom: 20px;
   font-size: 3rem;
+  @media(max-width: 1280px){
+    font-size: 1.5rem;
+  }
 `;
 
 const ContactForm = () => {

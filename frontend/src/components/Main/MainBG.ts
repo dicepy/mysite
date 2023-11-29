@@ -17,6 +17,7 @@ const Animation = keyframes`
 const MainBG = styled.div`
   z-index: -1;
   position: fixed;
+  top: 0;
   background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(155, 89, 182, 0.2), rgba(231, 76, 60, 0.2)),
   url(${clouds}) center/cover no-repeat;
   width: 100vw;
